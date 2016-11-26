@@ -6,7 +6,7 @@ depuis un `QR Code` spécifique, imprimé sur un livret.
 
 ## Exemple de QR code valide
 
-Attention, les QR code sont imprimé en miroir, car le dispositif utilise un périscope attaché à la caméra frontale de l’iPad.
+Attention, les QR code sont imprimés en miroir, car le dispositif utilise un périscope attaché à la caméra frontale de l’iPad.
 
 ![http://livre.f93.fr/deux/](qrcode.png)
 
@@ -16,22 +16,24 @@ Attention, les QR codes hors domaine livre.f93.fr ne sont pas éligibles à la l
 
 - OSX 10.12 + XCode 8
 - nodejs
-- npm / yarn
+- npm ou yarn
 - React Native 0.38.0
 
 ## Installation
 
-Installer les packages via `npm` 
+Dans le terminal, se rendre dans le dossier du projet,
+en utilisant la commande `cd <chemin/du/dossier>`.
+Installer les packages via `yarn` 
 
 	yarn install
 
-ou via `yarn`
+ou via `npm`
 
 	npm install
 
 ## Déploiement sur un iPad
 
-brancher l’iPad (il faut qu'il soit validé par developer.apple.com) puis
+brancher l’iPad (il faut que l’appareil soit enregistré sur `Member Center` par developer.apple.com, en mode Développement) puis
 
 	react-native run-ios --device
 
