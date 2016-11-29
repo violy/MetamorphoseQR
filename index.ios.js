@@ -16,7 +16,7 @@ import {
 } from 'react-native';
 import Camera from 'react-native-camera';
 
-var DEFAULT_URL = 'http://livre.f93.fr/deux/';
+var DEFAULT_URL = 'www/index.html';
 var WEBVIEW_REF = 'mywebview';
 
 export default class MetamorphoseQR extends Component {
