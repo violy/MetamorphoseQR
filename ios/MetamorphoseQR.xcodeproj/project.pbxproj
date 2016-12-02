@@ -776,6 +776,7 @@
 					"-ObjC",
 					"-lc++",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = net.violy.MetamorphoseQR;
 				PRODUCT_NAME = MetamorphoseQR;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -802,6 +803,7 @@
 					"-ObjC",
 					"-lc++",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = net.violy.MetamorphoseQR;
 				PRODUCT_NAME = MetamorphoseQR;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";

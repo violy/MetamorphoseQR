@@ -47,6 +47,7 @@ export default class MetamorphoseQR extends Component {
           ref={(cam) => {
             this.camera = cam;
           }}
+          type="front"
           style={styles.preview}
           aspect={Camera.constants.Aspect.fill}
           onBarCodeRead={this.onBarCodeRead.bind(this)}
