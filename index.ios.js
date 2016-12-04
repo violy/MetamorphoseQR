@@ -18,6 +18,7 @@ import Camera from 'react-native-camera';
 
 var DEFAULT_URL = 'www/index.html';
 var WEBVIEW_REF = 'mywebview';
+var current_url = DEFAULT_URL;
 
 export default class MetamorphoseQR extends Component {
   state = {
@@ -76,17 +77,13 @@ export default class MetamorphoseQR extends Component {
           isF93 = /http:\/\/livre.f93.fr\/.*/g,
           mywebview = this.refs[WEBVIEW_REF];
       if(isF93.test(qrURL)){
-        if(qrURL !== this.state.url){
           this.setState({
-            url: qrURL,
           });
           mywebview.reload();
         }
-
       }
     }
   }
-
 }
 
 const styles = StyleSheet.create({

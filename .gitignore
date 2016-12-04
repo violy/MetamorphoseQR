@@ -38,3 +38,9 @@ buck-out/
 \.buckd/
 android/app/libs
 *.keystore
+
+*.m4v
+*.gif
+*.png
+*.mp3
+*.jpg
