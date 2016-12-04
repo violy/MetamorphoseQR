@@ -23,6 +23,7 @@ var current_url = DEFAULT_URL;
 export default class MetamorphoseQR extends Component {
   state = {
     url: DEFAULT_URL,
+    targetUrl: DEFAULT_URL,
     status: 'No Page Loaded',
     backButtonEnabled: false,
     forwardButtonEnabled: false,
@@ -54,6 +55,9 @@ export default class MetamorphoseQR extends Component {
           onBarCodeRead={this.onBarCodeRead.bind(this)}
           >
         </Camera>
+        <Text style={styles.url}>
+          TARGET {this.state.targetUrl} URL {this.state.url}
+        </Text>
       </View>
     );
   }
@@ -76,8 +80,13 @@ export default class MetamorphoseQR extends Component {
       var qrURL = e.data,
           isF93 = /http:\/\/livre.f93.fr\/.*/g,
           mywebview = this.refs[WEBVIEW_REF];
+          //
       if(isF93.test(qrURL)){
+        if(current_url !== qrURL){
+          current_url = qrURL;
           this.setState({
+            targetUrl: current_url,
+            url: current_url,
           });
           mywebview.reload();
         }
@@ -108,6 +117,16 @@ const styles = StyleSheet.create({
     height: Dimensions.get('window').height,
     width: Dimensions.get('window').width
   },
+  url: {
+    position: 'absolute',
+    bottom: 10,
+    right: 10,
+    fontFamily: 'Helvetica',
+    fontSize: 14,
+    fontWeight: "100",
+    textAlign: 'right',
+    width: Dimensions.get('window').width /2
+  }
 });
 
 AppRegistry.registerComponent('MetamorphoseQR', () => MetamorphoseQR);
